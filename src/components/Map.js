@@ -6,6 +6,20 @@ class Map extends Component {
   render(){
     const mapContainer = <div style={{height: '100%', width: '100%'}}></div>
 
+    // Go through the array and for each venue, create a marker variable with a position key
+    // and getting lat and long location
+    const markers = this.props.markers.map((venue, i) => {
+
+      const marker = {
+        position: {
+          lat: venue.location.lat,
+          lng: venue.location.lng
+        }
+      }
+      // Passing off a property - shorthand notation
+      return <Marker key={i} {...marker} />
+    })
+
     return (
       <GoogleMapLoader
         containerElement = { mapContainer }
@@ -14,6 +28,7 @@ class Map extends Component {
             defaultZoom={15}
             defaultCenter={this.props.center}
             options={{streetViewControl: false, mapTypeControl: false}}>
+            { markers }
           </GoogleMap>
         } />
     )
