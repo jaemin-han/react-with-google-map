@@ -1,0 +1,27 @@
+#body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+ /* background-color: blue;*/
+  height: 100%;
+  width: 100vw;
+  display: block;
+/*  flex-wrap: wrap;*/
+}
+
+#title {
+  font-size: 30px;
+  text-align: center;
+}
+
+#map {
+  width: 100vw;
+  height: 500px;
+}
+
+.half-col {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}

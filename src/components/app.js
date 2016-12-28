@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import Map from './components/Map'
-import Places from './components/Places'
+import Map from './Map/Map'
+import Places from './Places/Places'
 //npm i -S superagent - make an api request on our behalf
 import superagent from 'superagent'
+
+import './app.css'
+import './normalize.css'
 
 class App extends Component {
 
@@ -61,13 +64,19 @@ class App extends Component {
     // ]
 
     return(
-      <div>
-        This is the REACT APP!!
-        <div style={{width:300, height:600, background:'red'}}>
+      <div id="body">
+        <h1 id="title">This is the REACT APP!!</h1>
+
+        <div className="half-col">
+          <div id="map">
           {/*<Map center={location}  markers={markers} />}*/}
-          <Map center={location}  markers={this.state.venues} />
+            <Map center={location}  markers={this.state.venues} />
+          </div>
         </div>
-        <Places venues={this.state.venues} />
+
+
+          <Places venues={this.state.venues} />
+
       </div>
     )
   }

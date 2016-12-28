@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { GoogleMapLoader, GoogleMap, Marker } from 'react-google-maps'
+// import './Map.css';
 // Import sub-modules from the library (pieces - visual components [googlemap and marker])
 
 class Map extends Component {
@@ -21,16 +22,16 @@ class Map extends Component {
     })
 
     return (
-      <GoogleMapLoader
-        containerElement = { mapContainer }
-        googleMapElement = {
-          <GoogleMap
-            defaultZoom={17}
-            defaultCenter={this.props.center}
-            options={{streetViewControl: false, mapTypeControl: false}}>
-            { markers }
-          </GoogleMap>
-        } />
+        <GoogleMapLoader
+          containerElement = { mapContainer }
+          googleMapElement = {
+            <GoogleMap
+              defaultZoom={17}
+              defaultCenter={this.props.center}
+              options={{streetViewControl: false, mapTypeControl: false}}>
+              { markers }
+            </GoogleMap>
+          } />
     )
   }
 }

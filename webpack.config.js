@@ -1,10 +1,11 @@
 var webpack = require("webpack");
 var path = require('path');
+// var css = require("css-loader!./file.css");
 
 module.exports = {
 
   entry: {
-    app: "./src/app.js"
+    app: "./src/components/app.js"
   },
   output: {
     filename: "build/bundle.js",
@@ -20,7 +21,9 @@ module.exports = {
         query:{
           presets:['react', 'es2015']
         }
-      }
+      },
+      { test: /\.css$/,
+        loader: "style-loader!css-loader?root=." }
     ]
   }
 }

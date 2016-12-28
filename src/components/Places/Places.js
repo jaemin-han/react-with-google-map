@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Places.css';
 
 class Places extends Component {
   render(){
@@ -10,10 +11,10 @@ class Places extends Component {
     })
 
     return (
-      <div>
+      <div id="background">
       <h2>Venues</h2>
         <ol>
-          {list }
+          { list }
         </ol>
       </div>
     )
