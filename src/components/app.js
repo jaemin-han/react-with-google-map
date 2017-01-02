@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Map from './Map/Map'
 import Places from './Places/Places'
-//npm i -S superagent - make an api request on our behalf
-import superagent from 'superagent'
+import superagent from 'superagent' //npm i -S superagent - make an api request on our behalf
 
 import './app.css'
 import './normalize.css'
@@ -29,6 +28,7 @@ class App extends Component {
     // Running 4 functions chronological - chaining four function.
     // This will fire api
 
+    // foursquare api fetch
     const url = 'https://api.foursquare.com/v2/venues/search?v=20140806&ll=40.7575285,-73.9884469&client_id=VZZ1EUDOT0JYITGFDKVVMCLYHB3NURAYK3OHB5SK5N453NFD&client_secret=UAA15MIFIWVKZQRH22KPSYVWREIF2EMMH0GQ0ZKIQZC322NZ'
 
     superagent
@@ -49,6 +49,7 @@ class App extends Component {
 
   render() {
 
+    // define my current coordinate
     const location = {
       lat: 40.7575285,
       lng: -73.9884469

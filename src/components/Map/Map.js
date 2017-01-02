@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { GoogleMapLoader, GoogleMap, Marker } from 'react-google-maps'
 // import './Map.css';
+// need to figure out to connect css for this component
 // Import sub-modules from the library (pieces - visual components [googlemap and marker])
 
 class Map extends Component {
